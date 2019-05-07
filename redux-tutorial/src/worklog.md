@@ -3,3 +3,4 @@
 
 ## 以下項目
 - createStore()でstoreを作成する際には、reducerを引数で渡す必要がある
+  - reducerは関数として定義する
