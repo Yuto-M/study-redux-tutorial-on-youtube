@@ -12,3 +12,5 @@
   - combineReducers()にはオブジェクトを引数として渡す。
   - 合体させたreducerをcreateReducer()の引数に渡す。
 - storeを作成する際に初期stateをもたせたい場合、createStore()の第2引数にオブジェクトで初期stateを渡すとそれが設定できる
+- reduxの拡張機能を追加して、createStore()の第3引数に渡すとブラウザでstateが確認できる
+  - reduxの拡張機能では特定のactionがdispatchされたことによって、stateがどうなったかをtaraveling debuggingしながら確認したり、特定のactionでどんなpayloadがreducerに渡ったかを確認できる
