@@ -12,3 +12,5 @@ npx create-react-app redux-tutorial
 ```
 yarn add readux react-redux
 ```
+
+- reducerを分割する際の粒度をどれくらいにするか。component単位、page単位etc??
