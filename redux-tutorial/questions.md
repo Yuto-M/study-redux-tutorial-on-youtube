@@ -23,3 +23,5 @@ yarn add readux react-redux
 - gitでローカルリポジトリで作業した後、remoteリポジトリを作成してうまいことpushさせる方法。リモートリポジトリ作成時にreadme.mdを作成してローカルリポジトリをpushしようとするとエラーになる。（単に、リモートの内容をローカルに取り込んでいないため）。ただ、リモートの内容をローカルに取り込もうとするとリポジトリのhistoryが違うと言われてエラーになってしまう。
 一応下記方法で解決はできたが、本来的にはどうやるのが良い感じなのか。
 https://qiita.com/takanatsu/items/fc89de9bd11148da1438
+
+- combineReducers()でオブジェクトのkeyとreducerをセットで定義するがその際に設定したkeyがstate.keyでreducerの引数stateに渡されるstateはstoreが保持しているstateのstate.keyの部分のみ？
