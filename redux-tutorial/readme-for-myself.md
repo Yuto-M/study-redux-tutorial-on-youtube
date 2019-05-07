@@ -6,3 +6,4 @@
 # このプロジェクトは下記YouTubeのredux tutorialをhands on形式で作業しています。
 https://www.youtube.com/watch?v=OSSpVLpuVWA&list=LLeMoszkoQi6It-yI7RqTzEQ&index=2&t=1459s
 
+# 17:40くらいのところまでやりました
