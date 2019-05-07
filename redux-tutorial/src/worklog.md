@@ -14,3 +14,10 @@
 - storeを作成する際に初期stateをもたせたい場合、createStore()の第2引数にオブジェクトで初期stateを渡すとそれが設定できる
 - reduxの拡張機能を追加して、createStore()の第3引数に渡すとブラウザでstateが確認できる
   - reduxの拡張機能では特定のactionがdispatchされたことによって、stateがどうなったかをtaraveling debuggingしながら確認したり、特定のactionでどんなpayloadがreducerに渡ったかを確認できる
+- reduxのstoreとcomponentを結びつけるのに使用するのが、react-reduxのconnect()メソッド
+  - connect()は3つの引数を取る。以下参照
+    - mapStateToProps()
+      - mapStateToProps()はstoreのstateをcomponentのどのpropsに渡すかを決定する
+      - mapStateToProps()のstateはstoreで保持しているstateでreturnするオブジェクトのkeyがコンポーネントからthis.props.keyでアクセスできる。
+    - mapActionsToProps() or mapDispatchToProps()
+      - mapActionsToProps()はcomponentのpropsにactionを発行するための関数をmapするために使用する。actionを発行する関数は、新しいstateをdispatch()するので、storeが保持しているreducerでstateが更新される流れになる。
