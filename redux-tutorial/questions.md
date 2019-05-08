@@ -29,3 +29,4 @@ https://qiita.com/takanatsu/items/fc89de9bd11148da1438
 - reduxのcompose, applyMiddlewareは何をするためのものか
 - actionCreatorとは
 - jqueryのajaxメソッドの使い方
+- createSelector()とは
