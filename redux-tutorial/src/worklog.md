@@ -21,3 +21,4 @@
       - mapStateToProps()のstateはstoreで保持しているstateでreturnするオブジェクトのkeyがコンポーネントからthis.props.keyでアクセスできる。
     - mapActionsToProps() or mapDispatchToProps()
       - mapActionsToProps()はcomponentのpropsにactionを発行するための関数をmapするために使用する。actionを発行する関数は、新しいstateをdispatch()するので、storeが保持しているreducerでstateが更新される流れになる。
+- mapStateToPropsの第二引数にはcomponentのプロパティに渡した値がセットされて渡ってくる。その渡ってきた値をmapStateToPropsで使用してプロパティに値をセットすることが可能
