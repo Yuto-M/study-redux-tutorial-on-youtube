@@ -28,5 +28,34 @@ https://qiita.com/takanatsu/items/fc89de9bd11148da1438
 - bindActionCreators()は何をしてるのか。
 - reduxのcompose, applyMiddlewareは何をするためのものか
 - actionCreatorとは
-- jqueryのajaxメソッドの使い方
+- jQueryのajaxメソッドの使い方
 - createSelector()とは
+- ~~mapDispatchToPropsで非同期を扱う方法~~
+  - そもそも純粋なreduxで非同期を扱うには、middlewareで制御する必要があるっぽい
+    - そこで、redux-thunkを使う。mapDispatchToProps()でdispatch()に関数を返すようにすると、redux-thunkが働き、ajax通信完了後のstoreに送りたい値をdispatch()して、それをまたdispatch()するとうまくいく。詳細は公式に書いてある。
+https://github.com/reduxjs/redux-thunk
+```
+// Meet thunks.
+// A thunk in this context is a function that can be dispatched to perform async
+// activity and can dispatch actions and read state. 
+// This is an action creator that returns a thunk:
+function makeASandwichWithSecretSauce(forPerson) {
+  // We can invert control here by returning a function - the "thunk".
+  // When this function is passed to `dispatch`, the thunk middleware will intercept it,
+  // and call it with `dispatch` and `getState` as arguments. 
+  // This gives the thunk function the ability to run some logic, and still interact with the store.
+  return function (dispatch) {
+    return fetchSecretSauce().then(
+      sauce => dispatch(makeASandwich(forPerson, sauce)),
+      error => dispatch(apologize('The Sandwich Shop', forPerson, error))
+    );
+  };
+}
+
+// Thunk middleware lets me dispatch thunk async actions
+// as if they were actions!
+
+store.dispatch(
+  makeASandwichWithSecretSauce('Me')
+);
+```

@@ -22,7 +22,7 @@ class App extends React.Component {
   }
 
   onUpdateUser(event) {
-    this.props.onUpdateUser(event.target.value);
+    this.props.onUpdateUser(event);
   }
 
   render() {
@@ -69,10 +69,15 @@ const mapStateToProps = createSelector(
   })
 );
 
-const mapActionsToProps = {
-  onUpdateUser: updateUser,
-  onApiRequest: apiRequest,
-};
+const mapDispatchToProps = (dispatch) => {
+  return {
+    onUpdateUser: event => {
+      dispatch(updateUser(event.target.value));
+    },
+    onApiRequest: () => {
+      dispatch(apiRequest());
+    }
+  };
+}
 
-
-export default connect(mapStateToProps, mapActionsToProps)(App);
+export default connect(mapStateToProps, mapDispatchToProps)(App);

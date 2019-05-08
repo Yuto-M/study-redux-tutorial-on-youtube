@@ -21,11 +21,12 @@ export function showError() {
 }
 
 export function apiRequest() {
-  return dispatch => {
+  return (dispatch, getState) => {
     $.ajax({
-      url: "http://google.com",
-      success() {
+      url: "http://localhost:3000/example.json",
+      success(response) {
         console.log("success");
+        console.log(response);
       },
       error() {
         console.log("error");
