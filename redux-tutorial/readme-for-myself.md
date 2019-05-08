@@ -11,4 +11,5 @@ https://www.youtube.com/watch?v=OSSpVLpuVWA&list=LLeMoszkoQi6It-yI7RqTzEQ&index=
 |---|---|
 |1.0|redux-thunkを使用する前|
 |2.0|redux-thunkでajax通信できるとこまで実装済。|
+|3.0|reselectを使用するまでを実装してこのビデオの終わりまで実装|
 
