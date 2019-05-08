@@ -41,13 +41,15 @@ class App extends React.Component {
   }
 }
 
-const mapStateToProps = state => ({
-  products: state.products,
-  user: state.user,
-});
+const mapStateToProps = (state, props) => {
+  return {
+    products: state.products,
+    user: state.user,
+    userPlusProp: `${state.user} ${props.aRandomProps}`,
+  };
+};
 
 const mapActionsToProps = {
   onUpdateUser: updateUser,
 };
-
 export default connect(mapStateToProps, mapActionsToProps)(App);
