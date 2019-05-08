@@ -1,4 +1,6 @@
+import $ from "jquery";
 export const UPDATE_USER = 'users:updateUser';
+export const SHOW_ERROR = 'users:showERROR';
 
 export function updateUser(newUser) {
     return {
@@ -7,4 +9,28 @@ export function updateUser(newUser) {
             user: newUser,
         }
     };
+}
+
+export function showError() {
+    return {
+        type: SHOW_ERROR,
+        payload: {
+            user: 'ERROR!!',
+        }
+    };
+}
+
+export function apiRequest() {
+  return dispatch => {
+    $.ajax({
+      url: "http://google.com",
+      success() {
+        console.log("success");
+      },
+      error() {
+        console.log("error");
+        dispatch(showError());
+      }
+    });
+  };
 }

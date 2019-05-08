@@ -27,3 +27,5 @@
     - propsFromStateは、mapStateToPropsでreturnしているオブジェクトがセットされる
     - propsFromDispatchは、mapActionsToPropsでreturnしているオブジェクトがセットされる
     - onwPropsは、componentに設定したプロパティがセットされる
+- redux-thunkを使用してajax通信を行う
+  - compose()でapplyMiddlewareの最初にredux-thunkを渡さないとエラーになる仕様

@@ -26,3 +26,6 @@ https://qiita.com/takanatsu/items/fc89de9bd11148da1438
 
 - combineReducers()でオブジェクトのkeyとreducerをセットで定義するがその際に設定したkeyがstate.keyでreducerの引数stateに渡されるstateはstoreが保持しているstateのstate.keyの部分のみ？
 - bindActionCreators()は何をしてるのか。
+- reduxのcompose, applyMiddlewareは何をするためのものか
+- actionCreatorとは
+- jqueryのajaxメソッドの使い方
