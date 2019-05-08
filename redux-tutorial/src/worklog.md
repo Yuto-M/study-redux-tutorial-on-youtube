@@ -22,3 +22,8 @@
     - mapActionsToProps() or mapDispatchToProps()
       - mapActionsToProps()はcomponentのpropsにactionを発行するための関数をmapするために使用する。actionを発行する関数は、新しいstateをdispatch()するので、storeが保持しているreducerでstateが更新される流れになる。
 - mapStateToPropsの第二引数にはcomponentのプロパティに渡した値がセットされて渡ってくる。その渡ってきた値をmapStateToPropsで使用してプロパティに値をセットすることが可能
+- connect()の第3引数として、mergePropsを設定できる
+  - mergePropsは、propsFromState・propsFromDispatch・ownPropsの三種類を引数に取れる
+    - propsFromStateは、mapStateToPropsでreturnしているオブジェクトがセットされる
+    - propsFromDispatchは、mapActionsToPropsでreturnしているオブジェクトがセットされる
+    - onwPropsは、componentに設定したプロパティがセットされる
