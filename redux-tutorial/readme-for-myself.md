@@ -7,4 +7,8 @@
 https://www.youtube.com/watch?v=OSSpVLpuVWA&list=LLeMoszkoQi6It-yI7RqTzEQ&index=2&t=1459s
 
 # タグ
-v1.0 - redux-thunkを使用する前
+|version|note|
+|---|---|
+|1.0|redux-thunkを使用する前|
+|2.0|redux-thunkでajax通信できるとこまで実装済。|
+
