@@ -8,26 +8,37 @@
 npx create-react-app redux-tutorial
 ```
 
-- yarnの下記コマンド
+- ~~yarnの下記コマンド~~
 ```
 yarn add readux react-redux
 ```
+  - yarn addがpackage.jsonとかに残しつつ、インストール
+  - yarn installがnpm install
 
 - reducerを分割する際の粒度をどれくらいにするか。component単位、page単位etc??
 
 - window.devToolsExtensionとは何か？
-- mapDispatchToProp()とmapActionsToProps()の違い
+- ~~mapDispatchToProp()とmapActionsToProps()の違い~~
+  - actionをmapするかdispatchをmapするかの違いだと思う
 
-- class componentの中でmethodを定義した際にconstructorでbindするのは何故か確認。
+- ~~class componentの中でmethodを定義した際にconstructorでbindするのは何故か確認。~~
+  - constructorでthisをbindしているからインスタンスをさせるが、thisでbindしていないとコードバックがjsの仕様的にundefinedになるから
+https://qiita.com/nb_tomo/items/f0d9855e6b55b40b35b8
 
 - gitでローカルリポジトリで作業した後、remoteリポジトリを作成してうまいことpushさせる方法。リモートリポジトリ作成時にreadme.mdを作成してローカルリポジトリをpushしようとするとエラーになる。（単に、リモートの内容をローカルに取り込んでいないため）。ただ、リモートの内容をローカルに取り込もうとするとリポジトリのhistoryが違うと言われてエラーになってしまう。
 一応下記方法で解決はできたが、本来的にはどうやるのが良い感じなのか。
 https://qiita.com/takanatsu/items/fc89de9bd11148da1438
 
 - combineReducers()でオブジェクトのkeyとreducerをセットで定義するがその際に設定したkeyがstate.keyでreducerの引数stateに渡されるstateはstoreが保持しているstateのstate.keyの部分のみ？
-- bindActionCreators()は何をしてるのか。
-- reduxのcompose, applyMiddlewareは何をするためのものか
-- actionCreatorとは
+- ~~bindActionCreators()は何をしてるのか。~~
+  - reduxでは、actionCreatorはactionを返すだけだが、fluxではacitonを作成したらそのままdispatch()まで行う。reduxでもそれを行うには、bindActionCreators()を使用する。
+  　つまり、dispatch()まで行うactionCreatorを作成するのに使う関数。
+- ~~reduxのcompose, applyMiddlewareは何をするためのものか~~
+  - applyMiddlewareはミドルウェアをreduxに適用できるようにするために必要
+  - composeは関数を受けとって、合成関数を返す関数
+    - https://hogehuga.com/post-1123/
+- ~~actionCreatorとは~~
+  - actionを返す関数のこと
 - jQueryのajaxメソッドの使い方
 - createSelector()とは
 - ~~mapDispatchToPropsで非同期を扱う方法~~
