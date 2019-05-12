@@ -3,7 +3,8 @@
 
 ## 以下項目
 
-- 環境構築で最初に打つ下記コマンド
+- ~~環境構築で最初に打つ下記コマンド~~
+  - packageの実行コマンドでnpxってのがある。
 ```
 npx create-react-app redux-tutorial
 ```
